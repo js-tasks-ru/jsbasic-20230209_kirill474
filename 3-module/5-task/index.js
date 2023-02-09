@@ -3,13 +3,10 @@ function getMinMax(str) {
   const myArray = string
     .filter((item) => !isNaN(item))
     .map((item) => Number(item));
-  const sorted = myArray.sort((a, b) => a - b);
 
-  const result = (a, b) => {
-    let obj = {};
-    obj.max = b;
-    obj.min = a;
-    return obj;
+  let result = {
+    max: Math.max(...myArray),
+    min: Math.min(...myArray),
   };
-  return result(sorted[0], sorted.at(-1));
+  return result;
 }

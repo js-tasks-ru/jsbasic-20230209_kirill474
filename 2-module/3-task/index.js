@@ -1,6 +1,6 @@
 let calculator = {
   read(a, b) {
-    return (calculator.first = a), (calculator.second = b);
+    return (this.first = a), (this.second = b);
   },
   sum() {
     return this.first + this.second;
