@@ -1,3 +1,5 @@
 function truncate(str, maxlength) {
-  // ваш код...
+  const lengthCase = str.length > maxlength;
+  const replacedPart = lengthCase ? str.substring(maxlength - 1) : str;
+  return lengthCase ? str.replace(replacedPart, "…") : str;
 }
